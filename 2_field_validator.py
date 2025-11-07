@@ -29,7 +29,8 @@ class Patient(BaseModel):
     def transform_name(cls, value):
         return value.upper()
     
-    @field_validator('age', mode='after')
+    @field_validator('age', mode='after')#validates after type coercion
+
     @classmethod
     def validate_age(cls, value):
         if 0 < value < 100:
