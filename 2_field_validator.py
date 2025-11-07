@@ -1,6 +1,7 @@
 from pydantic import BaseModel, EmailStr, AnyUrl, Field, field_validator
 from typing import List, Dict, Optional, Annotated
 
+#Note:field_validator deals with only one field at time
 class Patient(BaseModel):
 
     name: str
